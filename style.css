@@ -1,0 +1,129 @@
+/* Mereset gaya default untuk semua elemen */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+/* Gaya untuk body dokumen */
+body {
+  background-color: rgb(170, 61, 97);
+}
+/* Gaya untuk container utama permainan */
+.container {
+  width: min(90%, 31.25em);
+  position: absolute; /* Mengatur posisi elemen menjadi absolute */
+  transform: translate(-50%, -50%); /* Menggeser elemen ke tengah layar */
+  top: 50%; /* Menempatkan elemen di tengah vertikal layar */
+  left: 50%; /* Menempatkan elemen di tengah horizontal layar */
+  background-color: #ffffff; /* Memberikan latar belakang putih pada elemen */
+  padding: 4em 2em; /* Menambahkan padding sebesar 4em pada atas dan bawah, serta 2em pada kiri dan kanan */
+  border-radius: 0.5em; /* Memberikan efek sudut melengkung pada elemen */
+  box-shadow: -1.5em -1.5em rgb(208, 185, 193); /* Menambahkan bayangan dengan pergeseran -1.5em pada sumbu x dan y serta warna bayangan RGB (208, 185, 193) */
+  text-align: center; /* Mengatur rata tengah teks di dalam elemen */
+}
+h1 {
+  color: #ffffff; /* Memberikan warna putih pada teks */
+  text-align: center; /* Menengahkan teks */
+  margin-top: 0; /* Menghapus margin atas yang mungkin dimiliki oleh elemen <h1> secara default */
+  margin-bottom: 20px; /* Menambahkan margin bawah agar tidak terlalu rapat dengan elemen-elemen di atasnya */
+}
+/* Gaya untuk heading */
+h3 {
+  font-size: 1.2em;
+  font-weight: 500;
+  line-height: 2em;
+  color: #303030;
+}
+/* Gaya untuk input wrapper yang berisi input tebakan dan tombol */
+.input-wrapper {
+  width: 70%;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 1em;
+  margin: 3em auto 1.5em auto;
+}
+/* Gaya untuk input angka */
+input[type="number"] {
+  width: 100%; /* Mengisi lebar input sejauh 100% dari container yang mengandungnya */
+  padding: 1em; /* Memberikan padding sebesar 1em pada semua sisi input */
+  font-size: 1.2em; /* Mengatur ukuran font sebesar 1.2em */
+  text-align: center;
+  border: 2px solid #adaeae; /* Menambahkan border sebesar 2px dengan warna #adaeae */
+  border-radius: 0.3em; /* Memberikan efek sudut melengkung pada border sebesar 0.3em */
+  outline: none; /* Menghilangkan garis outline pada focus input */
+  appearance: text-field;
+  -moz-appearance: textfield;
+}
+/* Gaya untuk menghapus tombol putar default pada input angka */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Gaya untuk input angka yang sedang difokuskan */
+input[type="number"]:focus {
+  border-color: #e9587a;
+}
+/* Gaya untuk tombol umum */
+button {
+  font-size: 1em;
+  background-color: rgb(170, 61, 97);
+  color: #ffffff;   /* Memberikan warna teks putih */
+  border: none;  /* Menghapus border dan outline dari tombol */
+
+  outline: none;
+  border-radius: 0.5em;   /* Memberikan efek sudut melengkung pada tombol */
+  font-weight: 500;   /* Mengatur ketebalan font menjadi 500 (medium) */
+  cursor: pointer;   /* Mengubah kursor menjadi tanda tangan ketika berada di atas tombol */
+
+}
+/* Gaya untuk tombol restart */
+#restart {
+  margin: 0 auto 0 auto; /* Mengatur margin atas dan bawah menjadi 0 dan margin kiri-kanan secara otomatis (auto) */
+  padding: 0.8em 1em; /* Memberikan padding sebesar 0.8em pada atas-bawah dan 1em pada kiri-kanan */
+  display: none; /* Menyembunyikan elemen secara default */
+}
+/* Gaya untuk bagian hasil */
+.result {
+  margin-top: 1em;
+}
+/* Gaya untuk paragraf */
+p {
+  font-size: 1em;
+  font-weight: 400;
+  color: #565b70;
+  word-break: break-all;
+}
+/* Gaya untuk pesan error dan success */
+.error,
+.success {
+  padding: 0.5em 0;
+  border-radius: 0.3em;
+  margin-bottom: 1em;
+  animation: pop 0.4s forwards;
+  transform: scale(0);
+}
+/* Gaya untuk pesan error */
+.error {
+  background-color: #ffcbcb;
+  color: #dc466bc6;
+}
+/* Gaya untuk pesan success *//* Gaya untuk pesan success */
+.success {
+  background-color: rgb(237, 191, 210);
+  color: rgb(122, 36, 70);
+}
+/* Animasi untuk munculnya pesan error dan success */
+@keyframes pop {
+  /* Pada awal animasi (0%) */
+  0% {
+    /* Mengatur skala transformasi menjadi 0 (elemen tidak terlihat) */
+    transform: scale(0);
+  }
+  /* Pada akhir animasi (100%) */
+  100% {
+    /* Mengatur skala transformasi menjadi 1 (elemen terlihat dengan ukuran normal) */
+    transform: scale(1);
+  }
+}
