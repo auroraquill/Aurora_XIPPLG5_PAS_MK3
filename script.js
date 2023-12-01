@@ -29,7 +29,7 @@ const play = () => {
   noOfGuesses += 1;
 
   // Memeriksa apakah tebakan benar atau salah
-  if (userGuess != answer) {
+  if (userGuess != answer) { // if else percabangan 
     // Menampilkan petunjuk jika tebakan salah
     if (userGuess < answer) {
       hint.innerHTML = "Too low. Try Again!";
@@ -62,7 +62,7 @@ const play = () => {
 const init = () => {
   console.log("Game Started");
 
-  // Menghasilkan jawaban acak antara 1 dan 100
+  // Menghasilkan jawaban acak antara 1 dan +
   answer = Math.floor(Math.random() * 100) + 1;
   console.log(answer);
   // Mengatur ulang jumlah tebakan dan daftar tebakan

@@ -1,0 +1,24 @@
+body {
+    margin-top: 300px;
+    background-color: rgb(237, 191, 210);
+}
+button {
+    margin-top: 20px; /* Jarak antara teks dan tombol */
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: rgb(170, 61, 97); 
+    border: none;
+    color: #fff; 
+    border-radius: 8px;
+}
+
+button:hover {
+    background-color: rgb(237, 191, 210);
+  }
+
+h3 {
+    color: #333; /* Warna teks */
+    font-size: 20px; /* Ukuran font */
+    margin-bottom: 15px; /* Jarak bawah */
+}
